@@ -536,7 +536,7 @@ Credits_Section_Button.TextWrapped = true
 Game_Section.Name = "Game_Section"
 Game_Section.Parent = Background
 Game_Section.Active = true
-Game_Section.BackgroundColor3 = Color3.fromRGB(255, 191, 15)
+Game_Section.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Game_Section.BackgroundTransparency = 1.000
 Game_Section.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Game_Section.BorderSizePixel = 0
@@ -937,7 +937,7 @@ Announce_Label.BorderSizePixel = 0
 Announce_Label.Position = UDim2.new(0, 25, 0, 150)
 Announce_Label.Size = UDim2.new(0, 350, 0, 150)
 Announce_Label.Font = Enum.Font.SourceSans
-Announce_Label.Text = loadstring(game:https://raw.githubusercontent.com/darekpruebas/EMOTES-OMEGADEZZ-HUB/refs/heads/main/tetexto"))()
+Announce_Label.Text = loadstring(game:HttpGet("https://raw.githubusercontent.com/darekpruebas/EMOTES-OMEGADEZZ-HUB/refs/heads/main/tetexto"))()
 Announce_Label.TextColor3 = Color3.fromRGB(255, 191, 15)
 Announce_Label.TextSize = 24.000
 Announce_Label.TextWrapped = true
@@ -1877,7 +1877,7 @@ ChatBox_Input.BorderColor3 = Color3.fromRGB(255, 191, 15)
 ChatBox_Input.Position = UDim2.new(0, 25, 0, 325)
 ChatBox_Input.Size = UDim2.new(0, 335, 0, 50)
 ChatBox_Input.Font = Enum.Font.Oswald
-ChatBox_Input.PlaceholderText = "Omision de chat [No serás baneado por tus mensajes]"
+ChatBox_Input.PlaceholderText = "Chat bypass [You won't get banned for your messages]"
 ChatBox_Input.Text = ""
 ChatBox_Input.TextColor3 = Color3.fromRGB(255, 191, 15)
 ChatBox_Input.TextSize = 14.000
@@ -1906,7 +1906,7 @@ Credits_Label.BorderSizePixel = 0
 Credits_Label.Position = UDim2.new(0, 25, 0, 150)
 Credits_Label.Size = UDim2.new(0, 350, 0, 150)
 Credits_Label.Font = Enum.Font.SourceSans
-Credits_Label.Text = "OMEGADEZZ HUB\nBy HonnyDezz\nDiscord: https://discord.gg/QRwxMMKtZW\nVersion:Emotes "..version
+Credits_Label.Text = "Made by: MalwareHUB \nDiscord: system_calix\nVersion: "..version
 Credits_Label.TextColor3 = Color3.fromRGB(255, 191, 15)
 Credits_Label.TextSize = 24.000
 Credits_Label.TextWrapped = true
@@ -1922,7 +1922,7 @@ Crown.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Crown.BorderSizePixel = 0
 Crown.Rotation = -20.000
 Crown.Size = UDim2.new(0, 75, 0, 75)
-Crown.Image = "rbxassetid://96508117963109"
+Crown.Image = "rbxassetid://113779444765863"
 Crown.ImageColor3 = Color3.fromRGB(255, 191, 15)
 
 Assets.Name = "Assets"
@@ -1967,7 +1967,7 @@ Fly_Pad.BackgroundTransparency = 1.000
 Fly_Pad.Position = UDim2.new(0.1, 0, 0.6, 0)
 Fly_Pad.Size = UDim2.new(0, 100, 0, 100)
 Fly_Pad.ZIndex = 2
-Fly_Pad.Image = "rbxassetid://96508117963109"
+Fly_Pad.Image = "rbxassetid://113779444765863"
 Fly_Pad.ImageRectOffset = Vector2.new(713, 315)
 Fly_Pad.ImageRectSize = Vector2.new(75, 75)
 Fly_Pad.Visible = false
@@ -2039,7 +2039,7 @@ OpenClose.BorderColor3 = Color3.fromRGB(0, 0, 0)
 OpenClose.BorderSizePixel = 0
 OpenClose.Position = UDim2.new(0, 0, 0.5, 0)
 OpenClose.Size = UDim2.new(0, 30, 0, 30)
-OpenClose.Image = "rbxassetid://96508117963109"
+OpenClose.Image = "rbxassetid://113779444765863"
 OpenClose.ImageColor3 = Color3.fromRGB(255, 191, 15)
 
 UICornerOC.CornerRadius = UDim.new(1, 0)
@@ -2162,7 +2162,7 @@ local function UpdateTarget(player)
 	else
 		TargetName_Input.Text = "@target..."
 		UserIDTargetLabel.Text = "UserID: \nDisplay: \nJoined: "
-		TargetImage.Image = "rbxassetid://96508117963109"
+		TargetImage.Image = "rbxassetid://10818605405"
 		TargetedPlayer = nil
 		if FlingTarget_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 			FlingTarget_Button.Ticket_Asset.ImageColor3 = Color3.fromRGB(255,0,0)
@@ -3535,6 +3535,6 @@ game:GetService("UserInputService").InputBegan:Connect(function(input,gameProces
 	end
 end)
 
-SendNotify("OMEGADEZZ HUB","Developed by Omegadezz HUB - Discord in your clipboard",10)
-setclipboard("https://discord.gg/QRwxMMKtZW")
+SendNotify("System Broken","Gui developed by MalwareHub - Discord in your clipboard",10)
+setclipboard("https://discord.gg/RkhpySwNR9")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/premium"))() -- load the premium

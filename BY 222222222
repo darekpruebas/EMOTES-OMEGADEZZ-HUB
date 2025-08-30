@@ -1,6 +1,6 @@
 --RELOAD GUI
 if game.CoreGui:FindFirstChild("SysBroker") then
-	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "OMEGADEZZ HUB Emotes / By HonnyDezz",Text = "GUI Already loaded, rejoin to re-execute",Duration = 5;})
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "OMEGADEZZ HUB Emotes / By HonnyDezz",Text = "Already loaded, rejoin to re-execute",Duration = 5;})
 	return
 end
 local version = 2
@@ -1819,7 +1819,7 @@ CMDX_Button.BorderSizePixel = 0
 CMDX_Button.Position = UDim2.new(0, 210, 0, 175)
 CMDX_Button.Size = UDim2.new(0, 150, 0, 30)
 CMDX_Button.Font = Enum.Font.Oswald
-CMDX_Button.Text = "CMDX"
+CMDX_Button.Text = "DEZZ"
 CMDX_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 CMDX_Button.TextScaled = true
 CMDX_Button.TextSize = 14.000
@@ -2150,7 +2150,7 @@ end
 local function UpdateTarget(player)
 	pcall(function()
 		if table.find(ForceWhitelist,player.UserId) then
-			SendNotify("System Broken","You cant target this player: @"..player.Name.." / "..player.DisplayName,5)
+			SendNotify("OMEGADEZZ","You cant target this player: @"..player.Name.." / "..player.DisplayName,5)
 			player = nil
 		end
 	end)
@@ -2522,7 +2522,7 @@ end)
 CMDBar.FocusLost:Connect(function()
 	command = CMDBar.Text
 	Players:Chat(command)
-	SendNotify("System Broken",("Executed "..command),5)
+	SendNotify("OMEGADEZZ",("Executed "..command),5)
 	CMDBar.Text = ""
 end)
 
@@ -2535,7 +2535,7 @@ WalkSpeed_Button.MouseButton1Click:Connect(function()
 			Speed = 16
 		end
 		plr.Character.Humanoid.WalkSpeed = tonumber(Speed)
-		SendNotify("System Broken","Walk speed updated.",5)
+		SendNotify("OMEGADEZZ","Walk speed updated.",5)
 	end)
 end)
 
@@ -2546,7 +2546,7 @@ JumpPower_Button.MouseButton1Click:Connect(function()
 			Power = 50
 		end
 		plr.Character.Humanoid.JumpPower = tonumber(Power)
-		SendNotify("System Broken","Jump power updated.",5)
+		SendNotify("OMEGADEZZ","Jump power updated.",5)
 	end)
 end)
 
@@ -2557,7 +2557,7 @@ FlySpeed_Button.MouseButton1Click:Connect(function()
 			Speed = 50
 		end
 		FlySpeed = tonumber(Speed)
-		SendNotify("System Broken","Fly speed updated.",5)
+		SendNotify("OMEGADEZZ","Fly speed updated.",5)
 	end)
 end)
 
@@ -2570,12 +2570,12 @@ end)
 
 SaveCheckpoint_Button.MouseButton1Click:Connect(function()
 	SavedCheckpoint = GetRoot(plr).Position
-	SendNotify("System Broken","Checkpoint saved.",5)
+	SendNotify("OMEGADEZZ","Checkpoint saved.",5)
 end)
 
 ClearCheckpoint_Button.MouseButton1Click:Connect(function()
 	SavedCheckpoint = nil
-	SendNotify("System Broken","Checkpoint cleared.",5)
+	SendNotify("OMEGADEZZ","Checkpoint cleared.",5)
 end)
 
 local flying = true
@@ -2969,10 +2969,10 @@ WhitelistTarget_Button.MouseButton1Click:Connect(function()
 					table.remove(ScriptWhitelist, i)
 				end
 			end
-			SendNotify("System Broken",TargetedPlayer.." removed from whitelist.",5)
+			SendNotify("OMEGADEZZ",TargetedPlayer.." removed from whitelist.",5)
 		else
 			table.insert(ScriptWhitelist, Players[TargetedPlayer].UserId)
-			SendNotify("System Broken",TargetedPlayer.." added to whitelist.", 5)
+			SendNotify("OMEGADEZZ",TargetedPlayer.." added to whitelist.", 5)
 		end
 	end
 end)
@@ -3393,7 +3393,7 @@ Day_Button.MouseButton1Click:Connect(function()
 	if Shaders_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(255,0,0) then
 		game:GetService("Lighting").ClockTime = 14
 	else
-		SendNotify("System Broken","Please turn off shaders.",5)
+		SendNotify("OMEGADEZZ","Please turn off shaders.",5)
 	end
 end)
 
@@ -3401,7 +3401,7 @@ Night_Button.MouseButton1Click:Connect(function()
 	if Shaders_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(255,0,0) then
 		game:GetService("Lighting").ClockTime = 19
 	else
-		SendNotify("System Broken","Please turn off shaders.",5)
+		SendNotify("OMEGADEZZ","Please turn off shaders.",5)
 	end
 end)
 
@@ -3410,7 +3410,7 @@ InfYield_Button.MouseButton1Click:Connect(function()
 end)
 
 CMDX_Button.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+	loadstring(game:HttpGet("https://github.com/darekpruebas/EMOTES-OMEGADEZZ-HUB/blob/main/CMDX",true))()
 end)
 
 Explode_Button.MouseButton1Click:Connect(function()
@@ -3429,7 +3429,7 @@ end)
 FreeEmotes_Button.MouseButton1Click:Connect(function()
 	if not FreeEmotesEnabled then
 		FreeEmotesEnabled = true
-		SendNotify("System Broken","Loading free emotes.\nCredits: Gi#7331")
+		SendNotify("OMEGADEZZ","Loading free emotes.\nCredits: Gi#7331")
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/AllEmotes"))()
 	end
 end)
@@ -3467,7 +3467,7 @@ Players.PlayerRemoving:Connect(function(player)
 	pcall(function()
 		if player.Name == TargetedPlayer then
 			UpdateTarget(nil)
-			SendNotify("System Broken","Targeted player left/rejoined.",5)
+			SendNotify("OMEGADEZZ","Targeted player left/rejoined.",5)
 		end
 	end)
 end)
@@ -3480,19 +3480,19 @@ plr.CharacterAdded:Connect(function(x)
 	end
 	if PotionDi_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(PotionDi_Button)
-		SendNotify("System Broken","PotionDick was automatically disabled due to your character respawn",5)
+		SendNotify("OMEGADEZZ","PotionDick was automatically disabled due to your character respawn",5)
 	end
 	if PotionFling_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(PotionFling_Button)
-		SendNotify("System Broken","PotionFling was automatically disabled due to your character respawn",5)
+		SendNotify("OMEGADEZZ","PotionFling was automatically disabled due to your character respawn",5)
 	end
 	if AntiRagdoll_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(AntiRagdoll_Button)
-		SendNotify("System Broken","AntiRagdoll was automatically disabled due to your character respawn",5)
+		SendNotify("OMEGADEZZ","AntiRagdoll was automatically disabled due to your character respawn",5)
 	end
 	if SpamMines_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(SpamMines_Button)
-		SendNotify("System Broken","SpamMines was automatically disabled due to your character respawn",5)
+		SendNotify("OMEGADEZZ","SpamMines was automatically disabled due to your character respawn",5)
 	end
 	if Fly_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(Fly_Button)
@@ -3500,7 +3500,7 @@ plr.CharacterAdded:Connect(function(x)
 		Fly_Pad.Visible = false
 		KeyDownFunction:Disconnect()
 		KeyUpFunction:Disconnect()
-		SendNotify("System Broken","Fly was automatically disabled due to your character respawn",5)
+		SendNotify("OMEGADEZZ","Fly was automatically disabled due to your character respawn",5)
 	end
 	x.Humanoid.Died:Connect(function()
 		pcall(function()
@@ -3515,7 +3515,7 @@ task.spawn(function()
 		pcall(function()
 			local GuiVersion = loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/version"))()
 			if version<GuiVersion then
-				SendNotify("System Broken","You are not using the latest version, please run the script again.",5)
+				SendNotify("OMEGADEZZ","You are not using the latest version, please run the script again.",5)
 				task.wait(5)
 				SysBroker:Destroy()
 				game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
@@ -3535,6 +3535,6 @@ game:GetService("UserInputService").InputBegan:Connect(function(input,gameProces
 	end
 end)
 
-SendNotify("HONNYDEZZ","Welcome OMEGADEZZ HUB - USER:Honnyydezz",20)
-setclipboard("https://discord.gg/QRwxMMKtZW")
+SendNotify("HONNYDEZZ","Welcome OMEGADEZZ HUB - USER:Honnyydezz",10)
+setclipboard("https://discord.gg/TQchfR6wse")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/premium"))() -- load the premium
